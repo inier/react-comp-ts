@@ -1,0 +1,26 @@
+{
+  "name": "react-component-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "pnpm --parallel -r run start",
+    "build": "pnpm -r run build",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "pnpm eslint --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "stylelint:fix": "pnpm stylelint --fix",
+    "lint": "pnpm eslint && pnpm stylelint",
+    "lint:fix": "pnpm eslint:fix && pnpm stylelint:fix"
+  },
+  "devDependencies": {
+    "@ice/pkg": "^1.5.0",
+    "@applint/spec": "^1.0.0",
+    "eslint": "^8.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "rimraf": "^4.1.2",
+    "stylelint": "^15.0.0",
+    "@ozo/lazy-loader": "workspace:*"
+  },
+  "packageManager": "pnpm@8.6.0"
+}
